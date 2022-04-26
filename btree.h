@@ -15,13 +15,13 @@ int insertRight(Node *son, Node *father);
 
 int insertLeft(Node *son, Node *father);
 
-void walkPreOrder(Node *root, void (*fn)(Node*));
+void walkPreOrder(Node *root, void (*fn)(Node *));
 
-void walkInOrder(Node *root, void (*fn)(Node*));
+void walkInOrder(Node *root, void (*fn)(Node *));
 
-void walkPostOrder(Node *root, void (*fn)(Node*));
+void walkPostOrder(Node *root, void (*fn)(Node *));
 
-void searchInLenght(Node *root, void (*fn)(Node*));
+void searchInLenght(Node *root, void (*fn)(Node *));
 
 void removeNode(Node *node, Node *root);
 

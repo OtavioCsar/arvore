@@ -1,9 +1,7 @@
 #include "btree.h"
 #include <stdio.h>
 
-void visit(Node* node){
-  printf("%c",node->info);
-}
+void visit(Node *node) { printf("%c", node->info); }
 
 int main(void) {
 

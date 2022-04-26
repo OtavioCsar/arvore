@@ -120,16 +120,14 @@ void walkPostOrder(Node *root, void (*fn)(Node *)) {
 
 void searchInLenght(Node *root, void (*fn)(Node *)) {
   Queue *q = createQueue();
-
   push(root, q);
-  while(q->head){
+  while (q->head) {
     Node *r = pop(q);
     fn(r);
-    if(r->left)
+    if (r->left)
       push(r->left, q);
-    if(r->right)
+    if (r->right)
       push(r->right, q);
-    
   }
   eraseQueue(q);
 }
