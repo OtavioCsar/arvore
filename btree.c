@@ -81,7 +81,9 @@ void eraseNode(Node *node) {
   node = NULL;
 }
 
-void eraseTree(Node *node) { walkPostOrder(node, &eraseNode); }
+void eraseTree(Node *node) { 
+  walkPostOrder(node, &eraseNode); 
+}
 
 int insertLeft(Node *son, Node *father) {
   if (!son && !father)
