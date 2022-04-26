@@ -3,6 +3,12 @@
 
 void visit(Node *node) { printf("%c", node->info); }
 
+void clearNode(Node *node) {
+  node->left = NULL;
+  node->right = NULL;
+  free(node);
+}
+
 int main(void) {
 
   Node *one = createNode('+');
@@ -35,4 +41,8 @@ int main(void) {
 
   searchInLenght(one, &visit);
   printf("\n\n");
+
+//Destroi arvore
+
+eraseTree(one);
 }

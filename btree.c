@@ -19,8 +19,11 @@ Queue *createQueue() {
 }
 
 void eraseQueue(Queue *q) {
-  if (q->head && !q->tail)
+  if (!q->head && !q->tail) {
     free(q);
+    q = NULL;
+    return;
+  }
   if (q->head) {
     while (q->head) {
       NodeQ *aux = q->head;
@@ -75,8 +78,10 @@ void eraseNode(Node *node) {
   node->right = NULL;
   node->father = NULL;
   free(node);
-  node = 0;
+  node = NULL;
 }
+
+void eraseTree(Node *node) { walkPostOrder(node, &eraseNode); }
 
 int insertLeft(Node *son, Node *father) {
   if (!son && !father)

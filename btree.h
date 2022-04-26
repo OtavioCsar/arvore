@@ -11,6 +11,8 @@ Node *createNode(char info);
 
 void eraseNode(Node *no);
 
+void eraseTree(Node *node);
+
 int insertRight(Node *son, Node *father);
 
 int insertLeft(Node *son, Node *father);
